@@ -80,5 +80,18 @@
             <feature name="Toast" value="Toast" />
         </config-file>
     </platform>
+
+  <!-- browser -->
+  <platform name="browser">
+    <config-file target="config.xml" parent="/*">
+      <feature name="Toast">
+        <param name="browser-package" value="Toast" />
+      </feature>
+    </config-file>
+
+    <js-module src="src/browser/ToastProxy.js" name="ToastProxy">
+      <runs />
+    </js-module>
+  </platform>
   
 </plugin>
